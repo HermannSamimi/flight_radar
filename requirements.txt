@@ -9,3 +9,7 @@ streamlit
 pydeck
 pandas
 python-dotenv
+streamlit-autorefresh
+snowflake-connector-python
+kafka-python
+python-dotenv

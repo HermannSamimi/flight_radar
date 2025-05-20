@@ -31,6 +31,8 @@ if __name__ == "__main__":
         data = fetch_aircraft_data()
         if data and "states" in data:
             print(f"Fetched {len(data['states'])} aircrafts")
+            batch = []  # Prepare list for Streamlit
+
             for state in data["states"][:100]:  # limit for demo
                 try:
                     aircraft = {
@@ -45,10 +47,16 @@ if __name__ == "__main__":
                         "heading": state[10],
                         "timestamp": data["time"]
                     }
+                    batch.append(aircraft)
                     producer.send(TOPIC, value=aircraft)
                     print("→ Sent:", aircraft)
                 except Exception as e:
                     print(f"Parse error: {e}")
+
+            # Save batch to local file for Streamlit
+            with open("data/latest_aircraft.json", "w") as f:
+                json.dump(batch, f)
+
         else:
             print("No valid data received")
         time.sleep(10)
