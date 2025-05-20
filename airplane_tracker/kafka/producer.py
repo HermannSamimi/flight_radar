@@ -7,11 +7,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-KAFKA_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS")
+KAFKA_SERVERS = "localhost:9092"
 TOPIC = os.getenv("KAFKA_TOPIC")
 
+KAFKA_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
+
 producer = KafkaProducer(
-    bootstrap_servers=KAFKA_SERVERS,
+    bootstrap_servers=KAFKA_SERVERS.split(","),   # ensures it's a list
     value_serializer=lambda v: json.dumps(v).encode("utf-8")
 )
 
@@ -54,7 +56,7 @@ if __name__ == "__main__":
                     print(f"Parse error: {e}")
 
             # Save batch to local file for Streamlit
-            with open("data/latest_aircraft.json", "w") as f:
+            with open("/Users/hermann/Documents/personal-training/flight_radar/airplane_tracker/data/latest_aircraft.json", "w") as f:
                 json.dump(batch, f)
 
         else:
