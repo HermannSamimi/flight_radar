@@ -1,0 +1,33 @@
+[2025-05-21T07:17:56.994+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_snowflake.consume_kafka_and_store_in_snowflake manual__2025-05-21T07:17:56.272908+00:00 [queued]>
+[2025-05-21T07:17:57.001+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_snowflake.consume_kafka_and_store_in_snowflake manual__2025-05-21T07:17:56.272908+00:00 [queued]>
+[2025-05-21T07:17:57.002+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-21T07:17:57.010+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): consume_kafka_and_store_in_snowflake> on 2025-05-21 07:17:56.272908+00:00
+[2025-05-21T07:17:57.014+0000] {standard_task_runner.py:57} INFO - Started process 239 to run task
+[2025-05-21T07:17:57.021+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_snowflake', 'consume_kafka_and_store_in_snowflake', 'manual__2025-05-21T07:17:56.272908+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_snowflake.py', '--cfg-path', '/tmp/tmpj3bs4wf1']
+[2025-05-21T07:17:57.025+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask consume_kafka_and_store_in_snowflake
+[2025-05-21T07:17:57.046+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-21T07:17:57.077+0000] {task_command.py:416} INFO - Running <TaskInstance: kafka_to_snowflake.consume_kafka_and_store_in_snowflake manual__2025-05-21T07:17:56.272908+00:00 [running]> on host e59c1544f2e4
+[2025-05-21T07:17:57.128+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_snowflake' AIRFLOW_CTX_TASK_ID='consume_kafka_and_store_in_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T07:17:56.272908+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-21T07:17:56.272908+00:00'
+[2025-05-21T07:17:57.131+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_to_snowflake.py", line 27, in consume_and_load
+    consumer = KafkaConsumer(
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/consumer/group.py", line 387, in __init__
+    self._client = self.config['kafka_client'](metrics=self._metrics, **self.config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/client_async.py", line 234, in __init__
+    self.cluster = ClusterMetadata(**self.config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/cluster.py", line 70, in __init__
+    self._bootstrap_brokers = self._generate_bootstrap_brokers()
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/cluster.py", line 75, in _generate_bootstrap_brokers
+    bootstrap_hosts = collect_hosts(self.config['bootstrap_servers'])
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/cluster.py", line 439, in collect_hosts
+    for host_port in hosts:
+TypeError: 'NoneType' object is not iterable
+[2025-05-21T07:17:57.136+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=kafka_to_snowflake, task_id=consume_kafka_and_store_in_snowflake, execution_date=20250521T071756, start_date=20250521T071756, end_date=20250521T071757
+[2025-05-21T07:17:57.142+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 4 for task consume_kafka_and_store_in_snowflake ('NoneType' object is not iterable; 239)
+[2025-05-21T07:17:57.158+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-05-21T07:17:57.168+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
