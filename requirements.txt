@@ -13,3 +13,8 @@ streamlit-autorefresh
 snowflake-connector-python
 kafka-python
 python-dotenv
+redis
+kafka-python
+python-dotenv
+prometheus_client
+python-json-logger
