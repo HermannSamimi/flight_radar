@@ -3308,3 +3308,24 @@ SyntaxError: invalid syntax
 [2025-05-21T11:36:17.249+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:36:17.248+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-05-21T11:36:17.266+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:36:17.266+0000] {dag.py:3722} INFO - Setting next_dagrun for aircraft_alerts_telegram to 2025-05-21T11:00:00+00:00, run_after=2025-05-21T12:00:00+00:00
 [2025-05-21T11:36:17.280+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/aircraft_alerts_telegram.py took 0.670 seconds
+[2025-05-21T11:36:47.621+0000] {processor.py:157} INFO - Started process (PID=3820) to work on /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:36:47.624+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/aircraft_alerts_telegram.py for tasks to queue
+[2025-05-21T11:36:47.625+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:36:47.625+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:36:48.131+0000] {processor.py:839} INFO - DAG(s) dict_keys(['aircraft_alerts_telegram']) retrieved from /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:36:48.154+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:36:48.154+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:36:48.172+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:36:48.172+0000] {dag.py:3722} INFO - Setting next_dagrun for aircraft_alerts_telegram to 2025-05-21T11:00:00+00:00, run_after=2025-05-21T12:00:00+00:00
+[2025-05-21T11:36:48.185+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/aircraft_alerts_telegram.py took 0.587 seconds
+[2025-05-21T11:37:18.536+0000] {processor.py:157} INFO - Started process (PID=3832) to work on /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:37:18.539+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/aircraft_alerts_telegram.py for tasks to queue
+[2025-05-21T11:37:18.541+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:18.540+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:37:19.081+0000] {processor.py:839} INFO - DAG(s) dict_keys(['aircraft_alerts_telegram']) retrieved from /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:37:19.103+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:19.102+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:37:19.118+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:19.118+0000] {dag.py:3722} INFO - Setting next_dagrun for aircraft_alerts_telegram to 2025-05-21T11:00:00+00:00, run_after=2025-05-21T12:00:00+00:00
+[2025-05-21T11:37:19.131+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/aircraft_alerts_telegram.py took 0.605 seconds
+[2025-05-21T11:37:49.556+0000] {processor.py:157} INFO - Started process (PID=3844) to work on /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:37:49.560+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/aircraft_alerts_telegram.py for tasks to queue
+[2025-05-21T11:37:49.562+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:49.561+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:37:50.098+0000] {processor.py:839} INFO - DAG(s) dict_keys(['aircraft_alerts_telegram']) retrieved from /opt/airflow/dags/aircraft_alerts_telegram.py
+[2025-05-21T11:37:50.128+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:50.128+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:37:50.143+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:50.143+0000] {dag.py:3722} INFO - Setting next_dagrun for aircraft_alerts_telegram to 2025-05-21T11:00:00+00:00, run_after=2025-05-21T12:00:00+00:00
+[2025-05-21T11:37:50.156+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/aircraft_alerts_telegram.py took 0.611 seconds
