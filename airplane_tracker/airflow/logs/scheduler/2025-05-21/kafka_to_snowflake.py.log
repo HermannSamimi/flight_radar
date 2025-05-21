@@ -4030,3 +4030,257 @@ airflow.exceptions.AirflowException: Invalid arguments were passed to PythonOper
 [2025-05-21T11:37:50.508+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:50.508+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-05-21T11:37:50.521+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:37:50.521+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:35:00+00:00, run_after=2025-05-21T11:40:00+00:00
 [2025-05-21T11:37:50.533+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.656 seconds
+[2025-05-21T11:38:20.845+0000] {processor.py:157} INFO - Started process (PID=3859) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:38:20.848+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:38:20.849+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:38:20.849+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:38:21.466+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:38:21.520+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:38:21.536+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:38:21.536+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:38:21.547+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:38:21.547+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:35:00+00:00, run_after=2025-05-21T11:40:00+00:00
+[2025-05-21T11:38:21.558+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.722 seconds
+[2025-05-21T11:38:51.854+0000] {processor.py:157} INFO - Started process (PID=3871) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:38:51.856+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:38:51.857+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:38:51.857+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:38:52.435+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:38:52.483+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:38:52.499+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:38:52.499+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:38:52.512+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:38:52.512+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:35:00+00:00, run_after=2025-05-21T11:40:00+00:00
+[2025-05-21T11:38:52.524+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.678 seconds
+[2025-05-21T11:39:22.911+0000] {processor.py:157} INFO - Started process (PID=3883) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:39:22.914+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:39:22.915+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:39:22.914+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:39:23.456+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:39:23.495+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:39:23.506+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:39:23.506+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:39:23.520+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:39:23.520+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:35:00+00:00, run_after=2025-05-21T11:40:00+00:00
+[2025-05-21T11:39:23.528+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.625 seconds
+[2025-05-21T11:39:53.854+0000] {processor.py:157} INFO - Started process (PID=3895) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:39:53.857+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:39:53.858+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:39:53.857+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:39:54.364+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:39:54.402+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:39:54.413+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:39:54.413+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:39:54.423+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:39:54.423+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:35:00+00:00, run_after=2025-05-21T11:40:00+00:00
+[2025-05-21T11:39:54.430+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.582 seconds
+[2025-05-21T11:40:24.729+0000] {processor.py:157} INFO - Started process (PID=3915) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:40:24.730+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:40:24.730+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:40:24.730+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:40:25.106+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:40:25.139+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:40:25.151+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:40:25.151+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:40:25.162+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:40:25.162+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:40:25.170+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.446 seconds
+[2025-05-21T11:40:55.461+0000] {processor.py:157} INFO - Started process (PID=3925) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:40:55.464+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:40:55.465+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:40:55.465+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:40:55.993+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:40:56.038+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:40:56.050+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:40:56.050+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:40:56.061+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:40:56.061+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:40:56.070+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.614 seconds
+[2025-05-21T11:41:26.410+0000] {processor.py:157} INFO - Started process (PID=3937) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:41:26.411+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:41:26.412+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:41:26.411+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:41:26.827+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:41:26.863+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:41:26.874+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:41:26.874+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:41:26.885+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:41:26.885+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:41:26.895+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.488 seconds
+[2025-05-21T11:41:56.946+0000] {processor.py:157} INFO - Started process (PID=3951) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:41:56.947+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:41:56.947+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:41:56.947+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:41:57.290+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:41:57.321+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:41:57.332+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:41:57.332+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:41:57.342+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:41:57.342+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:41:57.349+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.405 seconds
+[2025-05-21T11:42:27.412+0000] {processor.py:157} INFO - Started process (PID=3963) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:42:27.413+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:42:27.413+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:42:27.413+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:42:27.732+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:42:27.765+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:42:27.776+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:42:27.775+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:42:27.786+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:42:27.786+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:42:27.796+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.386 seconds
+[2025-05-21T11:42:58.029+0000] {processor.py:157} INFO - Started process (PID=3975) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:42:58.029+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:42:58.030+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:42:58.029+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:42:58.409+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:42:58.447+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:42:58.458+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:42:58.458+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:42:58.469+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:42:58.469+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:42:58.478+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.451 seconds
+[2025-05-21T11:43:29.299+0000] {processor.py:157} INFO - Started process (PID=3987) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:43:29.300+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:43:29.301+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:43:29.300+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:43:29.635+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:43:29.667+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:43:29.678+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:43:29.678+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:43:29.688+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:43:29.688+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:43:29.696+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.402 seconds
+[2025-05-21T11:43:59.930+0000] {processor.py:157} INFO - Started process (PID=3999) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:43:59.930+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:43:59.931+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:43:59.931+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:44:00.331+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:44:00.367+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:44:00.382+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:44:00.381+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:44:00.395+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:44:00.395+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:44:00.405+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.477 seconds
+[2025-05-21T11:44:30.561+0000] {processor.py:157} INFO - Started process (PID=4011) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:44:30.561+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:44:30.562+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:44:30.562+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:44:31.030+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:44:31.086+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:44:31.100+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:44:31.100+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:44:31.113+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:44:31.113+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:40:00+00:00, run_after=2025-05-21T11:45:00+00:00
+[2025-05-21T11:44:31.124+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.567 seconds
+[2025-05-21T11:45:01.415+0000] {processor.py:157} INFO - Started process (PID=4025) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:45:01.417+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:45:01.418+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:45:01.418+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:45:01.900+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:45:01.939+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:45:01.955+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:45:01.955+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:45:01.969+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:45:01.969+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:45:01.978+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.567 seconds
+[2025-05-21T11:45:32.236+0000] {processor.py:157} INFO - Started process (PID=4041) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:45:32.237+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:45:32.238+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:45:32.238+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:45:32.675+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:45:32.721+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:45:32.734+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:45:32.734+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:45:32.746+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:45:32.746+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:45:32.755+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.521 seconds
+[2025-05-21T11:46:02.988+0000] {processor.py:157} INFO - Started process (PID=4053) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:46:02.989+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:46:02.990+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:46:02.989+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:46:03.367+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:46:03.405+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:46:03.419+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:46:03.419+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:46:03.431+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:46:03.431+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:46:03.439+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.458 seconds
+[2025-05-21T11:46:33.729+0000] {processor.py:157} INFO - Started process (PID=4065) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:46:33.731+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:46:33.732+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:46:33.731+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:46:34.153+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:46:34.205+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:46:34.219+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:46:34.219+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:46:34.232+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:46:34.232+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:46:34.242+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.519 seconds
+[2025-05-21T11:47:04.523+0000] {processor.py:157} INFO - Started process (PID=4077) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:47:04.524+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:47:04.524+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:47:04.524+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:47:04.963+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:47:05.016+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:47:05.033+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:47:05.033+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:47:05.045+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:47:05.045+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:47:05.054+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.536 seconds
+[2025-05-21T11:47:35.368+0000] {processor.py:157} INFO - Started process (PID=4089) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:47:35.369+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:47:35.370+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:47:35.370+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:47:35.843+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:47:35.888+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:47:35.901+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:47:35.901+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:47:35.913+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:47:35.913+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:47:35.923+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.561 seconds
+[2025-05-21T11:48:06.205+0000] {processor.py:157} INFO - Started process (PID=4101) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:48:06.206+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:48:06.206+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:48:06.206+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:48:06.658+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:48:06.708+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:48:06.724+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:48:06.724+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:48:06.737+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:48:06.737+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:48:06.748+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.546 seconds
+[2025-05-21T11:48:37.069+0000] {processor.py:157} INFO - Started process (PID=4113) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:48:37.071+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:48:37.072+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:48:37.072+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:48:37.600+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:48:37.653+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:48:37.670+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:48:37.670+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:48:37.684+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:48:37.684+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:48:37.696+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.630 seconds
+[2025-05-21T11:49:08.334+0000] {processor.py:157} INFO - Started process (PID=4125) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:49:08.336+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:49:08.336+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:49:08.336+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:49:08.785+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:49:08.853+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:49:08.877+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:49:08.876+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:49:08.897+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:49:08.897+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:49:08.911+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.583 seconds
+[2025-05-21T11:49:39.139+0000] {processor.py:157} INFO - Started process (PID=4137) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:49:39.141+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:49:39.141+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:49:39.141+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:49:39.583+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:49:39.647+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:49:39.676+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:49:39.675+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:49:39.693+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:49:39.693+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:45:00+00:00, run_after=2025-05-21T11:50:00+00:00
+[2025-05-21T11:49:39.705+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.588 seconds
+[2025-05-21T11:50:10.435+0000] {processor.py:157} INFO - Started process (PID=4153) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:50:10.437+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:50:10.439+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:50:10.438+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:50:10.846+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:50:10.891+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:50:10.910+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:50:10.910+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:50:10.926+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:50:10.925+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:50:00+00:00, run_after=2025-05-21T11:55:00+00:00
+[2025-05-21T11:50:10.936+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.508 seconds
+[2025-05-21T11:50:41.129+0000] {processor.py:157} INFO - Started process (PID=4167) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:50:41.131+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:50:41.131+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:50:41.131+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:50:41.567+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:50:41.640+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:50:41.664+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:50:41.663+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:50:41.682+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:50:41.681+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:50:00+00:00, run_after=2025-05-21T11:55:00+00:00
+[2025-05-21T11:50:41.695+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.569 seconds
+[2025-05-21T11:51:12.484+0000] {processor.py:157} INFO - Started process (PID=4179) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:51:12.485+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:51:12.485+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:51:12.485+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:51:12.926+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:51:12.986+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:51:13.041+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:51:13.040+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:51:13.073+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:51:13.073+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:50:00+00:00, run_after=2025-05-21T11:55:00+00:00
+[2025-05-21T11:51:13.387+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.916 seconds
+[2025-05-21T11:51:43.942+0000] {processor.py:157} INFO - Started process (PID=4191) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:51:43.944+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:51:43.945+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:51:43.945+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:51:44.335+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:51:44.394+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:51:44.413+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:51:44.413+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:51:44.430+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:51:44.430+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:50:00+00:00, run_after=2025-05-21T11:55:00+00:00
+[2025-05-21T11:51:44.443+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.504 seconds
+[2025-05-21T11:52:15.300+0000] {processor.py:157} INFO - Started process (PID=4203) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:15.301+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:52:15.302+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:15.302+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:15.670+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:52:15.730+0000] {processor.py:839} INFO - DAG(s) dict_keys(['kafka_to_snowflake']) retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:15.750+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:15.750+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-05-21T11:52:15.763+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:15.763+0000] {dag.py:3722} INFO - Setting next_dagrun for kafka_to_snowflake to 2025-05-21T11:50:00+00:00, run_after=2025-05-21T11:55:00+00:00
+[2025-05-21T11:52:15.773+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.475 seconds
+[2025-05-21T11:52:28.600+0000] {processor.py:157} INFO - Started process (PID=4210) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:28.601+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:52:28.605+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:28.605+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:29.022+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:52:29.064+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:29.061+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/kafka_to_snowflake.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_snowflake.py", line 7, in <module>
+    from airplane_tracker.utils.secrets import get_secret
+ModuleNotFoundError: No module named 'airplane_tracker'
+[2025-05-21T11:52:29.064+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:29.092+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.501 seconds
+[2025-05-21T11:52:59.450+0000] {processor.py:157} INFO - Started process (PID=4222) to work on /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:59.452+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_to_snowflake.py for tasks to queue
+[2025-05-21T11:52:59.453+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:59.452+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:52:59.922+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:103 UserWarning: You have an incompatible version of 'pyarrow' installed (11.0.0), please install a version that adheres to: 'pyarrow<10.1.0,>=10.0.1; extra == "pandas"'
+[2025-05-21T11:52:59.984+0000] {logging_mixin.py:154} INFO - [2025-05-21T11:52:59.977+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/kafka_to_snowflake.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_to_snowflake.py", line 7, in <module>
+    from airplane_tracker.utils.secrets import get_secret
+ModuleNotFoundError: No module named 'airplane_tracker'
+[2025-05-21T11:52:59.985+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_to_snowflake.py
+[2025-05-21T11:53:00.001+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_to_snowflake.py took 0.563 seconds

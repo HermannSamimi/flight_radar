@@ -1,5 +1,6 @@
-FROM apache/airflow:2.7.3
-
-USER airflow
-
-RUN pip install --no-cache-dir kafka-python snowflake-connector-python python-dotenv
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+COPY airplane_tracker ./airplane_tracker
+CMD ["python", "airplane_tracker/kafka/producer.py"]

@@ -4753,3 +4753,281 @@ File Path                                      PID    Runtime      # DAGs    # E
 /opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.69s           2025-05-21T11:37:50
 /opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.69s           2025-05-21T11:37:50
 ================================================================================
+[2025-05-21T11:37:59.242+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-05-21T11:37:59.254+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-05-21T11:38:21.572+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.71s           2025-05-21T11:38:21
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.76s           2025-05-21T11:38:21
+================================================================================
+[2025-05-21T11:38:51.841+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py   3868  0.32s             1           0  0.71s           2025-05-21T11:38:21
+/opt/airflow/dags/kafka_to_snowflake.py         3871  0.01s             1           0  0.76s           2025-05-21T11:38:21
+================================================================================
+[2025-05-21T11:39:21.861+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.67s           2025-05-21T11:38:52
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.70s           2025-05-21T11:38:52
+================================================================================
+[2025-05-21T11:39:52.516+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.71s           2025-05-21T11:39:23
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.65s           2025-05-21T11:39:23
+================================================================================
+[2025-05-21T11:40:22.715+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.53s           2025-05-21T11:39:54
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.60s           2025-05-21T11:39:54
+================================================================================
+[2025-05-21T11:40:52.976+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.34s           2025-05-21T11:40:24
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.46s           2025-05-21T11:40:25
+================================================================================
+[2025-05-21T11:41:23.355+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.67s           2025-05-21T11:40:55
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.65s           2025-05-21T11:40:56
+================================================================================
+[2025-05-21T11:41:53.674+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.43s           2025-05-21T11:41:26
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.51s           2025-05-21T11:41:26
+================================================================================
+[2025-05-21T11:42:24.155+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.22s           2025-05-21T11:41:56
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.42s           2025-05-21T11:41:57
+================================================================================
+[2025-05-21T11:42:54.637+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.21s           2025-05-21T11:42:27
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.40s           2025-05-21T11:42:27
+================================================================================
+[2025-05-21T11:42:59.494+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-05-21T11:42:59.500+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-05-21T11:43:24.719+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.35s           2025-05-21T11:42:58
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.46s           2025-05-21T11:42:58
+================================================================================
+[2025-05-21T11:43:54.886+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.22s           2025-05-21T11:43:28
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.43s           2025-05-21T11:43:29
+================================================================================
+[2025-05-21T11:44:25.244+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.34s           2025-05-21T11:43:59
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.49s           2025-05-21T11:44:00
+================================================================================
+[2025-05-21T11:44:55.368+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.25s           2025-05-21T11:44:29
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.58s           2025-05-21T11:44:31
+================================================================================
+[2025-05-21T11:45:26.063+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.59s           2025-05-21T11:45:00
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.59s           2025-05-21T11:45:01
+================================================================================
+[2025-05-21T11:45:56.880+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.50s           2025-05-21T11:45:31
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.54s           2025-05-21T11:45:32
+================================================================================
+[2025-05-21T11:46:27.441+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.25s           2025-05-21T11:46:02
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.48s           2025-05-21T11:46:03
+================================================================================
+[2025-05-21T11:46:58.312+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.57s           2025-05-21T11:46:33
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.55s           2025-05-21T11:46:34
+================================================================================
+[2025-05-21T11:47:29.222+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.63s           2025-05-21T11:47:03
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.56s           2025-05-21T11:47:05
+================================================================================
+[2025-05-21T11:48:00.081+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-05-21T11:48:00.092+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-05-21T11:48:00.106+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.59s           2025-05-21T11:47:34
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.59s           2025-05-21T11:47:35
+================================================================================
+[2025-05-21T11:48:30.977+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.59s           2025-05-21T11:48:05
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.57s           2025-05-21T11:48:06
+================================================================================
+[2025-05-21T11:49:01.196+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.65s           2025-05-21T11:48:36
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.65s           2025-05-21T11:48:37
+================================================================================
+[2025-05-21T11:49:31.734+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.29s           2025-05-21T11:49:07
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.61s           2025-05-21T11:49:08
+================================================================================
+[2025-05-21T11:50:01.924+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.31s           2025-05-21T11:49:38
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.61s           2025-05-21T11:49:39
+================================================================================
+[2025-05-21T11:50:32.155+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.20s           2025-05-21T11:50:08
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.54s           2025-05-21T11:50:10
+================================================================================
+[2025-05-21T11:51:02.296+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.30s           2025-05-21T11:50:39
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.59s           2025-05-21T11:50:41
+================================================================================
+[2025-05-21T11:51:32.580+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.26s           2025-05-21T11:51:09
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.95s           2025-05-21T11:51:13
+================================================================================
+[2025-05-21T11:52:02.626+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.29s           2025-05-21T11:51:39
+/opt/airflow/dags/kafka_to_snowflake.py                                 1           0  0.53s           2025-05-21T11:51:44
+================================================================================
+[2025-05-21T11:52:32.944+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/kafka_to_snowflake.py                                 0           1  0.54s           2025-05-21T11:52:29
+/opt/airflow/dags/aircraft_alerts_telegram.py                           1           0  0.20s           2025-05-21T11:52:10
+================================================================================
+[2025-05-21T11:53:00.457+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-05-21T11:53:00.465+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-05-21T11:53:03.035+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/aircraft_alerts_telegram.py                           0           1  0.09s           2025-05-21T11:52:36
+/opt/airflow/dags/kafka_to_snowflake.py                                 0           1  0.60s           2025-05-21T11:53:00
+================================================================================

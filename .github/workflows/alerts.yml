@@ -1,0 +1,36 @@
+name: Aircraft Alerts
+on:
+  schedule:
+    # Run hourly
+    - cron: "0 * * * *"
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: eu-north-1
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      KAFKA_SECRET: flight_radar/kafka
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt python-telegram-bot
+
+      - name: Run alerts and notify
+        shell: bash
+        run: |
+          set +e
+          python -c "from airplane_tracker.airflow.dags.aircraft_alerts_telegram import alert_unusual_aircraft; alert_unusual_aircraft()"
+          status=$?
+          if [ $status -eq 0 ]; then
+            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+              -d chat_id="${TELEGRAM_CHAT_ID}" \
+              -d text="✅ Alerts check succeeded at $(date -u)"
+          else
+            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+              -d chat_id="${TELEGRAM_CHAT_ID}" \
+              -d text="❌ Alerts check failed (code $status) at $(date -u)"
+          fi
+          exit $status

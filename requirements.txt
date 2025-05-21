@@ -1,20 +1,18 @@
-certifi==2025.4.26
-charset-normalizer==3.4.2
-idna==3.10
-kafka-python==2.2.7
-python-dotenv==1.1.0
-requests==2.32.3
-urllib3==2.4.0
-streamlit
-pydeck
-pandas
-python-dotenv
-streamlit-autorefresh
-snowflake-connector-python
+# Core
 kafka-python
-python-dotenv
 redis
-kafka-python
 python-dotenv
 prometheus_client
 python-json-logger
+
+# Web UI
+streamlit
+pandas
+pydeck
+
+# Airflow Snowflake
+snowflake-connector-python
+apache-airflow
+
+# Telegram
+python-telegram-bot
