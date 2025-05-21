@@ -1,0 +1,567 @@
+[2025-05-21T09:10:26.200+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_snowflake.consume_and_store manual__2025-05-21T08:58:13+00:00 [queued]>
+[2025-05-21T09:10:26.208+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_snowflake.consume_and_store manual__2025-05-21T08:58:13+00:00 [queued]>
+[2025-05-21T09:10:26.208+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2025-05-21T09:10:26.216+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): consume_and_store> on 2025-05-21 08:58:13+00:00
+[2025-05-21T09:10:26.223+0000] {standard_task_runner.py:57} INFO - Started process 301 to run task
+[2025-05-21T09:10:26.233+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_snowflake', 'consume_and_store', 'manual__2025-05-21T08:58:13+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_snowflake.py', '--cfg-path', '/tmp/tmp1bzfd6bv']
+[2025-05-21T09:10:26.248+0000] {standard_task_runner.py:85} INFO - Job 26: Subtask consume_and_store
+[2025-05-21T09:10:26.291+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-21T09:10:26.372+0000] {task_command.py:416} INFO - Running <TaskInstance: kafka_to_snowflake.consume_and_store manual__2025-05-21T08:58:13+00:00 [running]> on host 181c87754ed7
+[2025-05-21T09:10:26.436+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_snowflake' AIRFLOW_CTX_TASK_ID='consume_and_store' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T08:58:13+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-21T08:58:13+00:00'
+[2025-05-21T09:10:26.437+0000] {kafka_to_snowflake.py:61} INFO - Starting Kafka → Snowflake ingestion task
+[2025-05-21T09:10:26.444+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T09:10:26.450+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 29092)]>: Broker version identified as 2.6
+[2025-05-21T09:10:26.451+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T09:10:26.452+0000] {consumer.py:120} WARNING - group_id is None: disabling auto-commit.
+[2025-05-21T09:10:26.455+0000] {subscription_state.py:177} INFO - Updating subscribed topics to: ('flights',)
+[2025-05-21T09:10:26.456+0000] {connection.py:334} INFO - Snowflake Connector for Python Version: 3.3.1, Python Version: 3.8.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.17
+[2025-05-21T09:10:26.457+0000] {connection.py:1103} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-05-21T09:10:26.457+0000] {connection.py:1121} INFO - Setting use_openssl_only mode to False
+[2025-05-21T09:10:27.619+0000] {subscription_state.py:246} INFO - Updated partition assignment: [('flights', 0)]
+[2025-05-21T09:10:27.621+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T09:10:27.621+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T09:10:27.622+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. 
+[2025-05-21T09:10:27.625+0000] {fetcher.py:413} INFO - Resetting offset for partition ('flights', 0) to offset 0.
+[2025-05-21T09:10:39.023+0000] {kafka_to_snowflake.py:94} INFO - Consumed 2400 messages; summarizing 21 countries.
+[2025-05-21T09:10:39.032+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:40.764+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:40.766+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:41.992+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:41.993+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:42.915+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:42.916+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:44.299+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:44.300+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:45.547+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:45.548+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:46.709+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:46.710+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:47.946+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:47.947+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:49.205+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:49.206+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:50.369+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:50.369+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:51.348+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:51.350+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:52.919+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:52.921+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:54.139+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:54.140+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:56.183+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:56.184+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:57.555+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:57.557+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:10:58.703+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:10:58.705+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:00.569+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:00.570+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:01.636+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:01.636+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:02.617+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:02.618+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:03.686+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:03.688+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:05.268+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:05.269+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:06.296+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:06.296+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:07.344+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:07.345+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:08.885+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:08.887+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:10.430+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:10.431+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:11.630+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:11.631+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:12.997+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:12.999+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:14.123+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:14.123+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:15.588+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:15.588+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:17.167+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:17.168+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:18.303+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:18.304+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:19.321+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:19.322+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:20.858+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:20.860+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:22.208+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:22.209+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:23.621+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:23.622+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:25.240+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:25.241+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:26.765+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:26.767+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:28.155+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:28.156+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:29.785+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:29.787+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:31.153+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:31.154+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:33.109+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:33.111+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:34.402+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:34.403+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:35.728+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:35.729+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:37.496+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:37.498+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:38.756+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:38.757+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:40.343+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:40.344+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:41.791+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:41.792+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:43.077+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:43.078+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:44.661+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:44.661+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:46.099+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:46.101+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:47.407+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:47.407+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:48.967+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:48.971+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:50.167+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:50.167+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:51.407+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:51.409+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:53.275+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:53.276+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:54.491+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:54.492+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:56.218+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:56.219+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:57.684+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:57.685+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:11:59.093+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:11:59.094+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:00.747+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:00.748+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:02.131+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:02.134+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:04.081+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:04.083+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:05.449+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:05.450+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:06.581+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:06.582+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:07.722+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:07.727+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:09.139+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:09.140+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:10.517+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:10.518+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:11.793+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:11.794+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:13.265+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:13.266+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:14.318+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:14.319+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:15.479+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:15.479+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:17.404+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:17.405+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:18.684+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:18.685+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:20.015+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:20.016+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:21.277+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:21.278+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:22.471+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:22.472+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:23.746+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:23.746+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:25.279+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:25.280+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:26.675+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:26.675+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:28.091+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:28.092+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:29.438+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:29.438+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:30.839+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:30.840+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:32.163+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:32.164+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:33.382+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:33.383+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:34.644+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:34.645+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:36.249+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:36.250+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:37.527+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:37.529+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:38.851+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:38.852+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:40.670+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:40.670+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:41.926+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:41.926+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:43.117+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:43.118+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:44.551+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:44.552+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:45.762+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:45.762+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:47.093+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:47.094+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:48.734+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:48.736+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:49.886+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:49.889+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:51.086+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:51.088+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:53.007+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:53.008+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:54.046+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:54.047+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:55.091+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:55.319+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:57.239+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:57.241+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:12:58.417+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:12:58.418+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:00.305+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:00.306+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:01.566+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:01.567+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:02.691+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:02.692+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:04.547+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:04.548+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:05.869+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:05.869+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:07.044+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:07.045+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:08.701+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:08.703+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:09.967+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:09.974+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:10.987+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:10.987+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:12.544+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:12.545+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:13.941+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:13.942+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:15.011+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:15.013+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:16.638+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:16.638+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:17.872+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:17.873+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:19.030+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:19.030+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:20.712+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:20.714+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:22.285+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:22.286+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:23.834+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:23.836+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:25.341+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:25.341+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:26.754+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:26.756+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:28.507+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:28.508+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:30.046+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:30.048+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:31.309+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:31.310+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:33.216+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:33.217+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:34.464+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:34.465+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:36.176+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:36.176+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:37.381+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:37.382+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:38.557+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:38.557+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:39.504+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:39.506+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:41.206+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:41.207+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:42.483+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:42.485+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:43.528+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:43.530+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:45.200+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:45.202+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:46.268+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:46.268+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:47.594+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:47.595+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:49.113+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:49.113+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:50.406+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:50.407+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:51.858+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:51.860+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:53.468+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:53.469+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:54.605+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:54.606+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:56.014+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:56.016+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:57.350+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:57.351+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:58.471+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:58.471+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:13:59.924+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:13:59.926+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:01.237+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:01.238+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:02.699+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:02.700+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:04.072+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:04.073+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:05.805+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:05.807+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:07.301+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:07.303+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:09.230+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:09.232+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:10.415+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:10.416+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:11.435+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:11.436+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:13.014+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:13.014+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:14.346+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:14.348+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:16.132+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:16.133+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:17.590+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:17.593+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:18.774+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:18.775+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:20.286+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:20.288+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:21.956+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:21.957+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:23.355+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:23.356+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:25.071+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:25.075+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:26.249+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:26.251+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:28.112+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:28.114+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:29.469+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:29.472+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:30.890+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:30.891+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:32.453+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:32.453+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:34.565+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:34.567+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:35.852+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:35.854+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:37.426+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:37.427+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:38.508+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:38.509+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:39.713+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:39.713+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:41.318+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:41.321+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:42.538+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:42.539+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:44.041+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:44.042+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:45.497+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:45.500+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:46.721+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:46.722+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:48.270+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:48.271+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:49.683+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:49.685+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:51.143+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:51.145+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:52.895+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:52.896+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:54.175+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:54.177+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:55.851+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:55.852+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:57.236+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:57.237+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:14:58.375+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:14:58.377+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:00.076+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:00.077+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:01.692+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:01.693+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:03.273+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:03.275+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:04.796+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:04.798+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:05.820+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:05.821+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:06.976+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:06.977+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:08.753+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:08.755+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:10.290+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:10.293+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:11.803+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:11.804+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:13.389+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:13.391+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:14.772+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:14.774+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:16.474+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:16.475+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:17.797+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:17.798+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:19.194+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:19.401+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:20.982+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:20.984+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:22.465+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:22.465+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:24.210+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:24.211+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:25.638+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:25.639+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:27.277+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:27.277+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:28.928+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:28.929+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:30.267+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:30.268+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:31.603+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:31.604+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:33.670+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:33.671+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:34.939+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:34.942+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:36.338+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:36.339+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:37.834+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:37.835+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:38.937+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:38.938+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:40.242+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:40.242+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:41.853+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:41.854+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:43.175+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:43.176+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:44.653+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:44.655+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:46.113+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:46.114+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:47.399+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:47.399+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:48.867+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:48.868+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:50.110+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:50.112+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:51.570+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:51.570+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:53.051+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:53.052+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:54.297+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:54.298+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:55.494+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:55.495+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:57.042+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:57.043+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:58.453+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:15:58.454+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:15:59.981+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:00.005+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:01.622+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:01.622+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:02.926+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:02.928+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:04.858+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:04.860+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:06.549+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:06.549+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:08.227+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:08.228+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:09.568+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:09.569+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:10.756+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:10.757+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:12.374+0000] {cursor.py:846} INFO - query execution done
+[2025-05-21T09:16:12.375+0000] {cursor.py:833} INFO - query: [INSERT INTO PUBLIC.aircraft_raw (icao24, callsign, origin_country, longitude, la...]
+[2025-05-21T09:16:12.560+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-05-21T09:16:12.607+0000] {process_utils.py:131} INFO - Sending 15 to group 301. PIDs of all processes in the group: [301]
+[2025-05-21T09:16:12.612+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 301
+[2025-05-21T09:16:12.614+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-21T09:16:12.817+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_to_snowflake.py", line 101, in consume_and_load
+    VALUES (%(icao24)s, %(callsign)s, %(origin_country)s,
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 834, in execute
+    ret = self._execute_helper(query, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 550, in _execute_helper
+    ret = self._connection.cmd_query(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/connection.py", line 1185, in cmd_query
+    ret = self.rest.request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 491, in request
+    return self._post_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 730, in _post_request
+    ret = self.fetch(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 849, in fetch
+    ret = self._request_exec_wrapper(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 987, in _request_exec_wrapper
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 891, in _request_exec_wrapper
+    return_object = self._request_exec(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 1189, in _request_exec
+    raise err
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/network.py", line 1084, in _request_exec
+    raw_ret = session.request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/requests/adapters.py", line 487, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1348, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/contrib/pyopenssl.py", line 330, in recv_into
+    if not util.wait_for_read(self.socket, self.socket.gettimeout()):
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/util/wait.py", line 145, in wait_for_read
+    return wait_for_socket(sock, read=True, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/util/wait.py", line 106, in poll_wait_for_socket
+    return bool(_retry_on_intr(do_poll, timeout))
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/util/wait.py", line 43, in _retry_on_intr
+    return fn(timeout)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/vendored/urllib3/util/wait.py", line 104, in do_poll
+    return poll_obj.poll(t)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-05-21T09:16:12.876+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=kafka_to_snowflake, task_id=consume_and_store, execution_date=20250521T085813, start_date=20250521T091026, end_date=20250521T091612
+[2025-05-21T09:16:12.935+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 26 for task consume_and_store (Task received SIGTERM signal; 301)
+[2025-05-21T09:16:13.002+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=301, status='terminated', exitcode=1, started='09:10:25') (301) terminated with exit code 1
+[2025-05-21T09:16:13.009+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 143
+[2025-05-21T09:16:13.095+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

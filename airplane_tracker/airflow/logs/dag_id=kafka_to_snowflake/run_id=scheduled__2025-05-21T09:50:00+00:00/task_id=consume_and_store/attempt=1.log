@@ -1,0 +1,41 @@
+[2025-05-21T09:55:00.648+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_snowflake.consume_and_store scheduled__2025-05-21T09:50:00+00:00 [queued]>
+[2025-05-21T09:55:00.652+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_snowflake.consume_and_store scheduled__2025-05-21T09:50:00+00:00 [queued]>
+[2025-05-21T09:55:00.652+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-21T09:55:00.658+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): consume_and_store> on 2025-05-21 09:50:00+00:00
+[2025-05-21T09:55:00.663+0000] {standard_task_runner.py:57} INFO - Started process 1104 to run task
+[2025-05-21T09:55:00.666+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_snowflake', 'consume_and_store', 'scheduled__2025-05-21T09:50:00+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_snowflake.py', '--cfg-path', '/tmp/tmpf67h2_ws']
+[2025-05-21T09:55:00.668+0000] {standard_task_runner.py:85} INFO - Job 48: Subtask consume_and_store
+[2025-05-21T09:55:00.684+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-21T09:55:00.714+0000] {task_command.py:416} INFO - Running <TaskInstance: kafka_to_snowflake.consume_and_store scheduled__2025-05-21T09:50:00+00:00 [running]> on host 181c87754ed7
+[2025-05-21T09:55:00.760+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_snowflake' AIRFLOW_CTX_TASK_ID='consume_and_store' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T09:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-21T09:50:00+00:00'
+[2025-05-21T09:55:00.762+0000] {kafka_to_snowflake.py:60} INFO - Starting Kafka → Snowflake ingestion for 2025-05-21T09:50:00+00:00 → 2025-05-21T09:55:00+00:00 UTC
+[2025-05-21T09:55:00.764+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T09:55:00.773+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 29092)]>: Broker version identified as 2.6
+[2025-05-21T09:55:00.773+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T09:55:00.774+0000] {subscription_state.py:177} INFO - Updating subscribed topics to: ('flights',)
+[2025-05-21T09:55:00.776+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T09:55:00.777+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T09:55:00.777+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. 
+[2025-05-21T09:55:00.879+0000] {cluster.py:400} INFO - Coordinator for group/***_kafka_to_snowflake is ('coordinator-1001', 'kafka', 29092, None)
+[2025-05-21T09:55:00.880+0000] {base.py:769} INFO - Discovered coordinator coordinator-1001 for group ***_kafka_to_snowflake
+[2025-05-21T09:55:00.880+0000] {base.py:820} INFO - Starting new heartbeat thread
+[2025-05-21T09:55:00.881+0000] {consumer.py:362} INFO - Revoking previously assigned partitions () for group ***_kafka_to_snowflake
+[2025-05-21T09:55:00.881+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=coordinator-1001 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T09:55:00.882+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=coordinator-1001 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T09:55:00.983+0000] {base.py:524} INFO - (Re-)joining group ***_kafka_to_snowflake
+[2025-05-21T09:55:00.990+0000] {base.py:524} INFO - (Re-)joining group ***_kafka_to_snowflake
+[2025-05-21T09:55:04.014+0000] {base.py:587} INFO - Elected group leader -- performing partition assignments using range
+[2025-05-21T09:55:04.041+0000] {base.py:401} INFO - Successfully joined group ***_kafka_to_snowflake with generation 3
+[2025-05-21T09:55:04.043+0000] {subscription_state.py:246} INFO - Updated partition assignment: [('flights', 0)]
+[2025-05-21T09:55:04.043+0000] {consumer.py:249} INFO - Setting newly assigned partitions (('flights', 0),) for group ***_kafka_to_snowflake
+[2025-05-21T09:55:10.779+0000] {base.py:834} INFO - Stopping heartbeat thread
+[2025-05-21T09:55:13.782+0000] {base.py:1037} WARNING - Heartbeat thread did not fully terminate during close
+[2025-05-21T09:55:13.783+0000] {base.py:865} INFO - Leaving consumer group (***_kafka_to_snowflake).
+[2025-05-21T09:55:13.789+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. 
+[2025-05-21T09:55:13.789+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=coordinator-1001 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. 
+[2025-05-21T09:55:13.790+0000] {kafka_to_snowflake.py:86} INFO - Consumed 0 new messages from Kafka
+[2025-05-21T09:55:13.791+0000] {kafka_to_snowflake.py:89} WARNING - No records in this 5-min window; exiting
+[2025-05-21T09:55:13.792+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-05-21T09:55:13.820+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=kafka_to_snowflake, task_id=consume_and_store, execution_date=20250521T095000, start_date=20250521T095500, end_date=20250521T095513
+[2025-05-21T09:55:13.882+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-21T09:55:13.895+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

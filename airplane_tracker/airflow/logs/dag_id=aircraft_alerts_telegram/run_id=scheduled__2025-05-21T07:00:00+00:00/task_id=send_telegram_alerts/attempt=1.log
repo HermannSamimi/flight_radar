@@ -1,0 +1,24 @@
+[2025-05-21T08:40:15.133+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: aircraft_alerts_telegram.send_telegram_alerts scheduled__2025-05-21T07:00:00+00:00 [queued]>
+[2025-05-21T08:40:15.140+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: aircraft_alerts_telegram.send_telegram_alerts scheduled__2025-05-21T07:00:00+00:00 [queued]>
+[2025-05-21T08:40:15.141+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-05-21T08:40:15.148+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): send_telegram_alerts> on 2025-05-21 07:00:00+00:00
+[2025-05-21T08:40:15.155+0000] {standard_task_runner.py:57} INFO - Started process 268 to run task
+[2025-05-21T08:40:15.157+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'aircraft_alerts_telegram', 'send_telegram_alerts', 'scheduled__2025-05-21T07:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/aircraft_alerts_telegram.py', '--cfg-path', '/tmp/tmp61_bz1tx']
+[2025-05-21T08:40:15.159+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask send_telegram_alerts
+[2025-05-21T08:40:15.169+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-21T08:40:15.192+0000] {task_command.py:416} INFO - Running <TaskInstance: aircraft_alerts_telegram.send_telegram_alerts scheduled__2025-05-21T07:00:00+00:00 [running]> on host 181c87754ed7
+[2025-05-21T08:40:15.433+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='aircraft_alerts_telegram' AIRFLOW_CTX_TASK_ID='send_telegram_alerts' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-21T07:00:00+00:00'
+[2025-05-21T08:40:15.436+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T08:40:15.440+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 29092)]>: Broker version identified as 2.6
+[2025-05-21T08:40:15.440+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T08:40:15.442+0000] {consumer.py:120} WARNING - group_id is None: disabling auto-commit.
+[2025-05-21T08:40:15.444+0000] {subscription_state.py:177} INFO - Updating subscribed topics to: ('flights',)
+[2025-05-21T08:40:15.446+0000] {subscription_state.py:246} INFO - Updated partition assignment: [('flights', 0)]
+[2025-05-21T08:40:15.447+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connecting> [IPv4 ('172.18.0.3', 29092)]>: connecting to kafka:29092 [('172.18.0.3', 29092) IPv4]
+[2025-05-21T08:40:15.452+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=1001 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Connection complete.
+[2025-05-21T08:40:15.452+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.7, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.3', 29092)]>: Closing connection. 
+[2025-05-21T08:40:15.453+0000] {fetcher.py:413} INFO - Resetting offset for partition ('flights', 0) to offset 200.
+[2025-05-21T08:40:20.445+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-05-21T08:40:20.453+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=aircraft_alerts_telegram, task_id=send_telegram_alerts, execution_date=20250521T070000, start_date=20250521T084015, end_date=20250521T084020
+[2025-05-21T08:40:20.472+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-21T08:40:20.483+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

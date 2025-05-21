@@ -61,4 +61,4 @@ if __name__ == "__main__":
 
         else:
             print("No valid data received")
-        time.sleep(10)
+        time.sleep(120)

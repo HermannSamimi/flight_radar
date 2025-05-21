@@ -26,8 +26,10 @@ def alert_unusual_aircraft():
     )
 
     alerts = []
+    count = 0
 
     for msg in consumer:
+        count += 1
         data = msg.value
         if not data:
             continue
@@ -35,9 +37,17 @@ def alert_unusual_aircraft():
         callsign = data.get("callsign", "").strip()
         altitude = data.get("altitude") or 0.0
 
-        if not callsign or altitude > 15000:
-            alert = f"✈️ ALERT\nCountry: {data.get('origin_country')}\nCallsign: {callsign or 'MISSING'}\nAltitude: {altitude}m"
+        # Smoke-test threshold (2 500 m ≈ 8 200 ft)
+        if not callsign or altitude > 2500:
+            alert = (
+                f"✈️ *TEST ALERT*\n"
+                f"Country: {data.get('origin_country')}\n"
+                f"Callsign: {callsign or 'MISSING'}\n"
+                f"Altitude: {altitude} m"
+            )
             alerts.append(alert)
+
+    print(f"[DEBUG] processed {count} messages, built {len(alerts)} alerts")
 
     if alerts:
         text = "\n\n".join(alerts)
@@ -52,7 +62,8 @@ def send_telegram_alert(message):
         "parse_mode": "Markdown"
     }
     try:
-        requests.post(url, json=data, timeout=10)
+        resp = requests.post(url, json=data, timeout=10)
+        resp.raise_for_status()
     except Exception as e:
         print("Failed to send Telegram alert:", e)
 
@@ -60,13 +71,13 @@ def send_telegram_alert(message):
 with DAG(
     "aircraft_alerts_telegram",
     default_args={"owner": "airflow", "retries": 0},
-    description="Alert on high altitude or missing callsign via Telegram",
+    description="Alert on missing callsign or test‐threshold altitude via Telegram",
     schedule_interval="@hourly",
     start_date=datetime(2025, 5, 20),
-    catchup=False
+    catchup=False,
 ) as dag:
 
     alert_task = PythonOperator(
         task_id="send_telegram_alerts",
-        python_callable=alert_unusual_aircraft
+        python_callable=alert_unusual_aircraft,
     )
