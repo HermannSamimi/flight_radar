@@ -9,18 +9,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout code
       - uses: actions/checkout@v3
 
+      # 2. Set up Python (no venv, installs globally)
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Install dependencies
+      # 3. Install & test in one shot
+      - name: Install package & run tests
         run: |
-          pip install -r requirements.txt
-          pip install -e .         # make airplane_tracker importable
-          pip install pytest
+          # Upgrade pip, install runtime deps
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
 
-      - name: Run tests
-        run: pytest --maxfail=1 --disable-warnings -q
+          # Install *your* package so `import airplane_tracker` works
+          python -m pip install -e .
+
+          # Install pytest
+          python -m pip install pytest
+
+          # Finally, run tests
+          python -m pytest --maxfail=1 --disable-warnings -q
