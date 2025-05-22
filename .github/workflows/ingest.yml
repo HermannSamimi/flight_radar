@@ -1,37 +1,29 @@
-name: Kafka→Snowflake Ingestion
+# .github/workflows/ingest.yml
+name: Daily Ingest to Snowflake
+
 on:
   schedule:
-    # Daily at 06:00 UTC (08:00 EET)
-    - cron: "0 6 * * *"
+    # 08:00 Europe/Tallinn is 05:00 UTC
+    - cron: '0 5 * * *'
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
     env:
-      AWS_REGION: eu-north-1
-      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      KAFKA_SECRET: flight_radar/kafka
-      SNOW_SECRET: flight_radar/snowflake
-
+      # Define these in GitHub Settings → Secrets → Actions
+      KAFKA_BOOTSTRAP_SERVERS: ${{ secrets.KAFKA_BOOTSTRAP_SERVERS }}
+      KAFKA_TOPIC: flights
+      FLIGHT_RADAR_SNOWFLAKE: ${{ secrets.FLIGHT_RADAR_SNOWFLAKE }}
     steps:
       - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run ingestion and notify
-        shell: bash
-        run: |
-          set +e
-          python -c "from airplane_tracker.airflow.dags.kafka_to_snowflake import consume_and_store; consume_and_store()"
-          status=$?
-          if [ $status -eq 0 ]; then
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
-              -d chat_id="${TELEGRAM_CHAT_ID}" \
-              -d text="✅ Daily ingestion succeeded at $(date -u)"
-          else
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
-              -d chat_id="${TELEGRAM_CHAT_ID}" \
-              -d text="❌ Daily ingestion failed (code $status) at $(date -u)"
-          fi
-          exit $status
+      - name: Ingest to Snowflake
+        run: python scripts/ingest_to_snowflake.py
