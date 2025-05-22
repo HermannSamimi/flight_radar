@@ -1,21 +1,8 @@
-# Core
+requests
 kafka-python
 redis
 python-dotenv
-prometheus_client
+prometheus-client
 python-json-logger
-requests
-
-# Web UI
-streamlit
-pandas
-pydeck
-
-# Airflow Snowflake
 snowflake-connector-python
-apache-airflow
-'pyarrow<19.0.0'
-apache-airflow
-
-# Telegram
 python-telegram-bot

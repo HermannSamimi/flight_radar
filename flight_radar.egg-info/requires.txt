@@ -1,0 +1,8 @@
+requests
+kafka-python
+redis
+python-dotenv
+prometheus-client
+python-json-logger
+snowflake-connector-python
+python-telegram-bot

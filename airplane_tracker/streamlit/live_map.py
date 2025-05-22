@@ -1,35 +1,47 @@
 import streamlit as st
-import pandas as pd
 import redis
-import json
-import pydeck as pdk
+from airplane_tracker.kafka.consumer import listen_and_publish
 
-st.set_page_config(page_title="Live Flight Radar", layout="wide")
-st.title("✈️ Live Flight Map")
 
-rc = redis.Redis.from_url(st.secrets["REDIS_URL"])
-map_placeholder = st.empty()
+def get_redis_client():
+    """Create and return a Redis client using the REDIS_URL secret."""
+    url = st.secrets.get("REDIS_URL")
+    if not url:
+        st.error("🔒 Missing REDIS_URL in Streamlit secrets. Please configure it in .streamlit/secrets.toml.")
+        st.stop()
+    return redis.Redis.from_url(url)
+
 
 def listen_and_render():
-    pub = rc.pubsub()
-    pub.subscribe("aircraft_updates")
-    for msg in pub.listen():
-        if msg['type']!= 'message': continue
-        data = json.loads(msg['data'])
-        df = pd.DataFrame(data)
-        layer = pdk.Layer(
-            "ScatterplotLayer", df,
-            get_position=["longitude","latitude"],
-            get_radius=20000,
-            pickable=True,
-            auto_highlight=True
-        )
-        deck = pdk.Deck(
-            initial_view_state={"latitude":0,"longitude":0,"zoom":1},
-            layers=[layer],
-            tooltip={"html":"<b>Callsign:</b> {callsign}<br><b>Alt:</b> {altitude} ft"}
-        )
-        map_placeholder.pydeck_chart(deck)
+    """Listen for flight messages and render them in Streamlit, also publishing to Redis."""
+    # Configure Streamlit page
+    st.set_page_config(page_title="Live Flight Map", layout="wide")
+    st.title("✈️ Live Flight Map")
+
+    # Get Redis client
+    rc = get_redis_client()
+
+    # Container for map updates
+    map_container = st.empty()
+
+    for msg in listen_and_publish():
+        # Publish to Redis channel
+        rc.publish("flights", msg)
+        # Parse message (assumed JSON with latitude/longitude)
+        try:
+            data = msg if isinstance(msg, dict) else st.json(msg)
+        except Exception:
+            data = {}
+
+        # Display on map
+        if data.get("latitude") and data.get("longitude"):
+            map_container.map([{
+                "lat": data["latitude"],
+                "lon": data["longitude"]
+            }])
+        else:
+            st.write(f"Received: {msg}")
+
 
 if __name__ == "__main__":
     listen_and_render()

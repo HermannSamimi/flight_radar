@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: flight_radar
+Version: 0.1.0
+Summary: Live flight tracking and ingestion pipelines
+Requires-Dist: requests
+Requires-Dist: kafka-python
+Requires-Dist: redis
+Requires-Dist: python-dotenv
+Requires-Dist: prometheus-client
+Requires-Dist: python-json-logger
+Requires-Dist: snowflake-connector-python
+Requires-Dist: python-telegram-bot
+Dynamic: requires-dist
+Dynamic: summary
