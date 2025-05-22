@@ -1,0 +1,33 @@
+name: Daily Flight Ingest
+
+on:
+  schedule:
+    # 05:00 UTC every day = 08:00 in Estonia (EEST)
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests snowflake-connector-python python-telegram-bot python-dotenv
+
+      - name: Run daily pipeline
+        env:
+          API_URL:           ${{ secrets.API_URL }}
+          API_KEY:           ${{ secrets.API_KEY }}
+          FLIGHT_RADAR_SNOWFLAKE: ${{ secrets.FLIGHT_RADAR_SNOWFLAKE }}
+          FLIGHT_RADAR_TELEGRAM:  ${{ secrets.FLIGHT_RADAR_TELEGRAM }}
+        run: |
+          python scripts/daily_pipeline.py
