@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out your code
+      # 1. Checkout your repo
       - uses: actions/checkout@v3
 
       # 2. Set up Python
@@ -18,12 +18,14 @@ jobs:
         with:
           python-version: '3.9'
 
-      # 3. Install runtime deps + test tools
+      # 3. Install dependencies and your package
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install -e .           # make airplane_tracker importable
           pip install pytest
 
-      # 4. Run tests, stop on first failure, suppress warnings
+      # 4. Run tests
       - name: Run tests
-        run: pytest --maxfail=1 --disable-warnings -q
+        run: |
+          pytest --maxfail=1 --disable-warnings -q
