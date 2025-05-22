@@ -4,6 +4,7 @@ redis
 python-dotenv
 prometheus_client
 python-json-logger
+requests
 
 # Web UI
 streamlit
@@ -12,6 +13,8 @@ pydeck
 
 # Airflow Snowflake
 snowflake-connector-python
+apache-airflow
+'pyarrow<19.0.0'
 apache-airflow
 
 # Telegram
