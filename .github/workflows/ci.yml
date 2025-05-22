@@ -14,7 +14,10 @@ jobs:
           pip install -r requirements.txt
           pip install pytest flake8
       - name: Lint
-        run: flake8 .
+        run: flake8 . \
+          --exclude=.venv,build,dist \
+          --max-complexity=10 \
+          --statistics
       - name: Test
         run: pytest --maxfail=1 --disable-warnings -q
         
