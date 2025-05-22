@@ -1,23 +1,37 @@
 name: CI
-on: [push, pull_request]
+
+on:
+  push:
+  pull_request:
+
 jobs:
   test-and-lint:
     runs-on: ubuntu-latest
+
     steps:
+      # 1. Check out your code
       - uses: actions/checkout@v3
+
+      # 2. Set up Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+
+      # 3. Install runtime deps plus test & lint tools
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
           pip install pytest flake8
+
+      # 4. Lint only your code (airplane_tracker/, scripts/, setup.py)
       - name: Lint
-        run: flake8 . \
-          --exclude=.venv,build,dist \
-          --max-complexity=10 \
-          --statistics
+        run: |
+          flake8 airplane_tracker scripts setup.py \
+            --max-complexity=10 \
+            --statistics
+
+      # 5. Run tests, stop on first failure, suppress warnings
       - name: Test
-        run: pytest --maxfail=1 --disable-warnings -q
-        
+        run: |
+          pytest --maxfail=1 --disable-warnings -q
