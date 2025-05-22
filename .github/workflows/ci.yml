@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout your repo
+      # 1. Check out your repo
       - uses: actions/checkout@v3
 
       # 2. Set up Python
@@ -18,14 +18,16 @@ jobs:
         with:
           python-version: '3.9'
 
-      # 3. Install dependencies and your package
+      # 3. Install your package & deps
       - name: Install dependencies
         run: |
+          cd flight_radar                # move into the folder that contains setup.py
           pip install -r requirements.txt
-          pip install -e .           # make airplane_tracker importable
+          pip install -e .               # this makes `import airplane_tracker` work
           pip install pytest
 
       # 4. Run tests
       - name: Run tests
         run: |
+          cd flight_radar
           pytest --maxfail=1 --disable-warnings -q
