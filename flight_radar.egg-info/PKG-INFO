@@ -10,5 +10,7 @@ Requires-Dist: prometheus-client
 Requires-Dist: python-json-logger
 Requires-Dist: snowflake-connector-python
 Requires-Dist: python-telegram-bot
+Requires-Dist: streamlit
+Requires-Dist: pydeck
 Dynamic: requires-dist
 Dynamic: summary

@@ -1,26 +1,41 @@
+import json
 import pytest
-from airplane_tracker.kafka.producer import fetch_and_publish, producer, redis_client
+from airplane_tracker.kafka.producer import fetch_adsb_data
 
-class DummyProducer:
-    def __init__(self): self.sent=[]
-    def send(self,t,m): self.sent.append((t,m))
-    def flush(self): pass
-class DummyRedis:
-    def __init__(self): self.ch=[]
-    def publish(self,c,m): self.ch.append((c,m))
+
+class DummyResp:
+    def __init__(self, data):
+        self._data = data
+
+    def json(self):
+        return {"data": self._data}
+
+    def raise_for_status(self):
+        pass
+
 
 @pytest.fixture(autouse=True)
-def patch_clients(monkeypatch):
-    monkeypatch.setattr("airplane_tracker.kafka.producer.producer", DummyProducer())
-    monkeypatch.setattr("airplane_tracker.kafka.producer.redis_client", DummyRedis())
+def patch_requests(monkeypatch):
+    """Redirect requests.get to our dummy response."""
+    def fake_get(url, params, timeout):
+        dummy = {
+            "flight": {"icao": "ABC123", "iata": "IAT123"},
+            "live": {"latitude": 1.0, "longitude": 2.0, "altitude": 10000},
+            "departure": {"iata": "XYZ"},
+        }
+        return DummyResp([dummy])
 
-def test_empty(monkeypatch):
-    monkeypatch.setattr("airplane_tracker.kafka.producer.fetch_adsb_data", lambda: [])
-    fetch_and_publish()
+    monkeypatch.setattr("airplane_tracker.kafka.producer.requests.get", fake_get)
+    yield
 
-def test_publish(monkeypatch):
-    data = [{"icao":"X","callsign":"FL1","latitude":0,"longitude":0,"altitude":0}]
-    monkeypatch.setattr("airplane_tracker.kafka.producer.fetch_adsb_data", lambda: data)
-    fetch_and_publish()
-    assert producer.sent
-    assert redis_client.ch
+
+def test_fetch_adsb_data():
+    records = fetch_adsb_data()
+    assert isinstance(records, list)
+    assert records[0]["icao"] == "ABC123"
+    assert records[0]["callsign"] == "IAT123"
+    assert records[0]["latitude"] == 1.0
+    assert records[0]["longitude"] == 2.0
+    assert records[0]["altitude"] == 10000
+    assert records[0]["country"] == "XYZ"
+    assert "timestamp" in records[0]

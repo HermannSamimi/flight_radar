@@ -6,3 +6,5 @@ prometheus-client
 python-json-logger
 snowflake-connector-python
 python-telegram-bot
+streamlit
+pydeck

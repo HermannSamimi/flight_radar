@@ -1,5 +1,3 @@
-# setup.py
-
 from setuptools import setup, find_packages
 
 setup(
@@ -16,6 +14,7 @@ setup(
         "python-json-logger",
         "snowflake-connector-python",
         "python-telegram-bot",
-        # (and any other libs you actually use)
+        "streamlit",
+        "pydeck",
     ],
 )
